@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>HOME</title>
+        <link rel="stylesheet" href="/assets/bootstrap-grid.min.css">
+        <link rel="stylesheet" href="/assets/home.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.4/css/all.css">
+    </head>
+    <body>
+        <%= render 'layouts/header' %>
+        <div class="wrapper1">
+        <div class="wrapper2">
+            <div class="main-text-wrapper">
+                <p class="main-text">
+                    <span>R</span>
+                    <span>E</span>
+                    <span>I</span>
+                    <span>A</span>
+                    <span>&nbsp;</span>
+                    <span>S</span>
+                    <span>O</span>
+                    <span>N</span>
+                    <span>E</span>
+                </p>
+            </div>
+
+            <div class="index-container">
+                <div class="index-wrapper row">
+                    <div class="col-xs-12 col-sm-4 index">
+                        <a href="/home#profile" style="height: 100%; width: 100%;">
+                            <div>
+                                <i class="fa-profile"></i>
+                                <span>PROFILE</span>
+                                <p style="text-align: center; margin: 0;"><i class="fa-down"></i></p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-xs-12 col-sm-4 index">
+                        <a href="/home#skills" style="height: 100%; width: 100%;">
+                            <div>
+                                <i class="fa-skills"></i>
+                                <span>SKILLS</span>
+                                <p style="text-align: center; margin: 0;"><i class="fa-down"></i></p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-xs-12 col-sm-4 index">
+                        <a href="/home#works" style="height: 100%; width: 100%;">
+                            <div>
+                                <i class="fa-works"></i>
+                                <span>WORKS</span>
+                                <p style="text-align: center; margin: 0;"><i class="fa-down"></i></p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        <div class='jump-content' id="profile">
+            <div class="box">
+                <p class="caption">-Profile-</p>
+                <div class="row introduction">
+                    <img src="/assets/noimage.svg" alt="Avatar" class="introduction-image col-md-12 col-lg-6">
+                    <div  class="introduction-text col-md-12 col-lg-6">
+                            <p>曽根 怜愛(reia sone)</p>
+                            <p>Web・ゲーム開発に興味があり、現在勉強中。<br>
+                            </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class='jump-content' id="skills">
+            <div class="box">
+                <p class="caption">-Skills-</p>
+                <div class="skills-wrapper">
+                    <div class="skills row">
+                        <div class="skill col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                            <div class="skill-card"></div>
+                            <div class="skill-name">Java</div>
+                            <div class="skill-image"><img src="/assets/java.svg" alt="skill"></div>
+                            <p class="skill-text">Webサイトの開発が可能です。</p>
+                        </div>
+                        <div class="skill col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                            <div class="skill-card"></div>
+                            <div class="skill-name">C#</div>
+                            <div class="skill-image"><img src="/assets/Csharp.svg" alt="skill"></div>
+                            <p class="skill-text">Unityと併用し、ゲーム開発が可能です。</p>
+                        </div>
+                        <div class="skill col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                            <div class="skill-card"></div>
+                            <div class="skill-name">HTML・CSS・JS</div>
+                            <div class="skill-image"><img src="/assets/HTML・CSS・JS.svg" alt="skill"></div>
+                            <p class="skill-text">Webサイトのフロント部分の制作が可能です。</p>
+                        </div>
+                        <div class="skill col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                        <div class="skill-card"></div>
+                        <div class="skill-image"><img src="/assets/SQL.svg" alt="skill"></div>
+                        <div class="skill-name">SQL</div>
+                        <p class="skill-text">テーブル操作、CRUDの操作など基本的な操作が可能です。</p>
+                        </div>
+                        <div class="skill col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                            <div class="skill-card"></div>
+                            <div class="skill-name">SpringFramework</div>
+                            <div class="skill-image"><img src="/assets/SpringFramework.svg" alt="skill"></div>
+                            <p class="skill-text">MVCモデルを使用したWebサイト開発が可能です。</p>
+                        </div>
+                        <div class="skill col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                            <div class="skill-card"></div>
+                            <div class="skill-name">Unity</div>
+                            <div class="skill-image"><img src="/assets/Unity.svg" alt="skill"></div>
+                            <p class="skill-text">3Dゲームの開発を主としていますが、2Dゲームの開発も可能です。</p>
+                        </div>
+                        <div class="skill col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                            <div class="skill-card"></div>
+                            <div class="skill-name">ExcelVBA</div>
+                            <div class="skill-image"><img src="/assets/Excel.svg" alt="skill"></div>
+                            <p class="skill-text">VBAを作成して、業務の効率化が可能です。</p>
+                        </div>
+                        <div class="skill col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                            <div class="skill-card"></div>
+                            <div class="skill-name">試験要領書作成</div>
+                            <div class="skill-image"><img src="/assets/test.svg" alt="skill"></div>
+                            <p class="skill-text">必要な情報を洗い出し、試験要領書の作成が可能です。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class='jump-content' id="works">
+            <div class="box">
+                <p class="caption">-Works-</p>
+                <p style="text-align: center;">Coming Soon...</p>
+            </div>
+        </div>
+            
+        <div class="contact-button">
+            <a href="/contact">お問い合わせ</a>
+        </div>
+        <p style="text-align: center; padding: 1rem;">ご興味のある方は、お気軽にお問い合わせください。</p>
+    </div>
+    </div>
+
+    <a href="#"><div id="page_top"></div></a>
+    <%= render 'layouts/footer' %>
+
+    <script src="/assets/smooth-scroll.polyfills.min.js"></script>
+    <script src="/assets/home.js"></script>
+    </body>
+</html>

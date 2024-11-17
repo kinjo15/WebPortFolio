@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <link rel="stylesheet" href="/assets/home.css">
+</head>
+<body>
+    <div class="wrapper1">
+    <div class="wrapper2">
+    <%= render 'layouts/header' %>
+    <%= form_with model:@contact, url: {action: 'create'}, local:true, data: { turbo: false } do |f| %>
+        <p style="text-align: center;">以下の内容を送信します。</p>
+        <div style="width: 100%;">
+            <table>
+            <tr>
+                <th style="text-align: right; overflow-wrap: normal;">名前：</th>
+                <td><%= @contact.name %></td>
+            </tr>
+            <tr>
+                <th style="text-align: right; overflow-wrap: normal;">
+                    <span>メールアドレス：</span>
+                </th>
+                <td>
+                    <span><%= @contact.email %></span>
+                </td>
+            </tr>
+            <tr>
+                <th style="text-align: right;">メッセージ：</th>
+                <td><%= @contact.message %></td>
+            </tr>
+            </table>
+        </div>
+
+        <%= f.hidden_field :name %>   
+        <%= f.hidden_field :email %>
+        <%= f.hidden_field :message %>
+
+        <div style="display: flex; flex-direction: row; max-width: 200px; margin: 0 auto">
+            <%= f.submit '戻る',name: 'back', class: "contact-button" %>
+            <%= f.submit '送信', class: "contact-button" %>
+        </div>
+        </div>
+    <% end %>
+    </div>
+    </div>
+    <%= render 'layouts/footer' %>
+    <script>
+        window.onbeforeunload = function() {};
+        window.onunload = function() {};
+        window.addEventListener('pageshow', function(event){
+            if(event.persisted)
+            {
+                window.location.reload();
+            }
+        });
+
+        //戻る・送信ボタンをクリックしたとき、ボタンを無効化する
+        var links = document.getElementsByTagName('a');
+        var buttons = document.getElementsByClassName('contact-button');
+        var isClick = false;
+        
+        //バックで戻ったとき
+        history.pushState(null, null, null);
+        window.addEventListener('popstate', function(event){
+            if(isClick){
+                window.location.reload();
+            }
+            else{
+                history.go(1);
+            }
+        });
+        
+        //ボタン無効
+        Array.prototype.forEach.call(buttons, button => {
+            button.onclick = function(){
+                if(isClick) return;
+                Array.prototype.forEach.call(buttons, button => {
+                    button.style.pointerEvents = 'none';
+                });
+                isClick = true;
+            }
+        });
+        
+        //リンク無効
+        Array.prototype.forEach.call(links, link => {
+            link.onclick = function(){
+                if(isClick) link.preventDefault();
+            }
+        });
+
+    </script>
+</body>
+</html>

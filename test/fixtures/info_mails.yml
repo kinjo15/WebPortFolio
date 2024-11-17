@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  sender: MyString
+  mail_address: MyString
+  message: MyString
+  received_date_and_time: MyString
+  check_flag: false
+
+two:
+  sender: MyString
+  mail_address: MyString
+  message: MyString
+  received_date_and_time: MyString
+  check_flag: false

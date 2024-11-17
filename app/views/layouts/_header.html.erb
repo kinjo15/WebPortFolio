@@ -1,0 +1,44 @@
+<header>
+    <p class="header-title"><a href="/home">PORTFOLIO</a></p>
+
+    <!--<div class="contact-button1"><a href="/contact">お問い合わせ</a></div>
+    <div class="hover-button contact-button2"><a href="/contact"><div class="contact-image"></div></a></div>
+
+    <nav class="nav-more-than-550">
+        <ul>
+            <li><a href="/home#profile">Profile</a></li>
+            <li><a href="/home#skills">Skills</a></li>
+            <li><a href="/home#works">Works</a></li>  
+        </ul>
+    </nav>
+    -->
+
+    <nav>
+        <ul>
+            <li><a href="/contact">お問い合わせ</a></li>
+        </ul>
+    </nav>
+
+    <!--<div class="humberger-menu hover-button">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>-->
+
+    <!--<nav class="nav-less-than-550 close">
+        <ul>
+            <a href="/home#profile"><li>Profile</li></a>
+            <a href="/home#skills"><li>Skills</li></a>
+            <a href="/home#works"><li>Works</li></a>
+        </ul>
+    </nav>-->
+
+    <script>
+        document.querySelectorAll('.humberger-menu').forEach(el => {
+            el.addEventListener('click', () => {
+            el.classList.toggle('active');
+            document.getElementsByClassName('nav-less-than-550')[0].classList.toggle('open');
+            });
+        });
+    </script>
+</header>
