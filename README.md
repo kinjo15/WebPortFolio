@@ -1,24 +1,30 @@
-# README
+# WebPortFolio
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## 概要
 
-Things you may want to cover:
+## 機能
 
-* Ruby version
+## 実行手順
 
-* System dependencies
+## 開発環境の構築と実行
+- VSCode拡張機能のインストール
+    - Dev Containers
 
-* Configuration
+- VSCodeのメニューから「表示」＞「コマンドパレット」を選択
 
-* Database creation
+- コマンドパレットで以下を入力し、実行
+    ```
+    Dev Containers: Reopen in Container
+    ```
 
-* Database initialization
+- VSCode上でウィンドウが再読み込みされる
 
-* How to run the test suite
+- .env.exampleをコピーして.envを作成する
+    ```bash
+    cp .env.example .env
+    # .envのPG_HOSTは"localhost"ではなく"db"としていする(別コンテナでDBを実行しているため)
+    ```
 
-* Services (job queues, cache servers, search engines, etc.)
+- F5キー もしくは VSCodeの左メニューの「実行とデバッグ」から実行
 
-* Deployment instructions
-
-* ...
+- ブラウザから http://localhost:3000 にアクセス
